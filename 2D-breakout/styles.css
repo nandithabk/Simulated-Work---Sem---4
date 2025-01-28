@@ -4,26 +4,34 @@
     height: 300px;
     border: solid 1px black;
     margin-top: 100px;
-  }
-  
-  .user {
+}
+
+.user {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blueviolet;
-  }
-  
-  .block {
+    background: linear-gradient(45deg, #000000, #67ffe1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s linear;
+}
+
+.block {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blue;
-  }
-  
-  .ball {
+    background: linear-gradient(45deg, #ffdd00, #000000);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.ball {
     position: absolute;
     width: 20px;
     height: 20px;
-    border-radius: 10px;
-    background-color: red;
-  }
+    border-radius: 50%;
+    background: radial-gradient(circle, #e74c3c, #c0392b);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s linear;
+}
