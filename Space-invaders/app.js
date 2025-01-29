@@ -15,7 +15,6 @@ for (let i = 0; i < width * width; i++) {
 
 const squares = Array.from(document.querySelectorAll(".grid div"))
 
-
 const alienInvaders = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
     15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
@@ -85,11 +84,13 @@ function moveInvaders() {
     if (squares[currentShooterIndex].classList.contains("invader")) {
         resultDisplay.innerHTML = "GAME OVER"
         clearInterval(invadersId)
+        showGameOver()
     }
 
     if (aliensRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = "YOU WIN"
         clearInterval(invadersId)
+        showGameWin()
     }
 }
 
@@ -125,3 +126,13 @@ function shoot(e) {
 }
 
 document.addEventListener('keydown', shoot)
+
+function showGameOver() {
+    document.body.style.backgroundColor = "red"
+    setTimeout(() => alert("Game Over! Press OK to restart."), 100)
+}
+
+function showGameWin() {
+    document.body.style.backgroundColor = "green"
+    setTimeout(() => alert("You Win! Press OK to restart."), 100)
+}
